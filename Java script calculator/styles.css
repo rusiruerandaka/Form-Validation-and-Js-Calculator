@@ -1,0 +1,43 @@
+.main{
+    background-color: aliceblue;
+    width: 300px;
+    padding-top: 25px;
+    margin-left: 610px;
+    margin-top: 50px;
+    border-radius: 5%;
+    opacity: 0.5;
+    
+}
+
+.number{
+    height: 30px;
+    margin-left: 62px;
+    margin-top: 15px;
+    border-radius: 3%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    
+}
+
+.sum1{
+    
+        height: 30px;
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-left: 97px;
+        margin-top: 15px;
+        border-radius: 3%;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+
+}
+
+.btn{
+    height: 35px;
+    margin-left: 114px;
+    background-color: rgb(81, 88, 95);
+    padding-left: 15px;
+    padding-right: i5px;
+    color: aliceblue;
+    border-radius: 10%;
+}

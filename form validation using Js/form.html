@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>
+            Form Validation
+        </title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+
+    </head>
+    <body>
+        <div class="form">
+            <h2 align="center">Registration Form</h2>
+            <hr>
+            <form id="registrationForm" onsubmit="return validateForm()">
+
+            <table class="table">
+                <tr>
+                    <td >
+                        Name:
+                    </td>
+                    <td>
+                        <input id="name" type="text" name="name" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td >
+                        Email:
+                    </td>
+                    <td>
+                        <input id="email" type="text" name="email" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input id="password" type="password" name="password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm Password:
+                    </td>
+                    <td>
+                    <input id="confirmPassword" type="password" name="password2" required>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="terms" type="checkbox" name="agree" value="I agree with Term and Conditions" required>I agree with Term and Conditions
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <Input class="abc" type="submit" name="submit" value="submit" onclick="ValidateEmail(document.form1)">
+                    </td>
+                </tr>
+            </table>
+            </form>
+            <p class="alert" id="errorMessages" class="error"></p>
+        </div>
+        <script>
+            function validateForm() {
+    
+                 var name = document.getElementById('name').value;
+                 var email = document.getElementById('email').value;
+                 var password = document.getElementById('password').value;
+                 var confirmPassword = document.getElementById('confirmPassword').value;
+                 var terms = document.getElementById('terms').checked;
+                 var errorMessages = document.getElementById('errorMessages');
+    
+    
+            var messages = [];
+ 
+    
+             var namePattern = /^[a-zA-Z\s]+$/;
+              if (name === "" || !namePattern.test(name)) {
+                 messages.push("* Name must contain only letters and spaces.");
+              }
+
+    
+             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (email === "" || !emailPattern.test(email)) {
+                messages.push("* Please enter a valid email address.");
+             }
+
+    
+             var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+             if (password === "" || !passwordPattern.test(password)) {
+                messages.push("* Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.");
+             }
+
+    
+             if (confirmPassword === "" || confirmPassword !== password) {
+               messages.push("* Confirm password must match the password.");
+             }
+
+    
+             if (!terms) {
+               messages.push("* You must agree with the terms and conditions.");
+             }
+
+    
+            if (messages.length > 0) {
+              errorMessages.innerHTML = messages.join("<br>");
+               return false; 
+             }
+
+    return true; 
+}
+
+        </script>
+
+    </body>
+</html>

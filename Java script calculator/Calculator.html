@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Calculator
+    </title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <script type="text/javascript">
+        function tot(){
+            var a = parseFloat(document.getElementById('num1').value);
+            var b = parseFloat(document.getElementById('num2').value);
+
+            var c= document.getElementById('sum').value;
+            var ans;
+
+            if(c==="+"){
+                ans= a+b;
+                
+            }else if(c==="-"){
+                ans = a-b;
+                
+            } else if(c=== "*"){
+                ans = a*b;
+                
+            } else if(c ==="/"){
+                if (b !== 0) {
+                   ans = a / b;
+             } else {
+                    ans = 'Cannot divide by zero';
+        }
+            }
+
+            document.getElementById("ans").textContent=ans;
+        }
+    </script>
+
+</head>
+<body bgcolor="F4D38C">
+
+    <div class="main">
+        <h2 align="center">Calculator</h2>
+        <hr>
+        <input class="number" type="number" id="num1" >
+        <input class="number" type="number" id="num2" >
+
+        <select id="sum" class="sum1">
+            <option value="+"><b> + </b></option>
+            <option value="-"><b> - </b></option>
+            <option value="*"><b> * </b></option>
+            <option value="/"><b> / </b></option>
+        </select>
+        <br>
+        <br>
+
+        <button onclick="tot()" class="btn">
+            Calculate
+
+        </button>
+
+        <p align="center"><b>Answer is =<span id="ans"></span></p></b>
+
+    </div>
+
+</body>
+</html>

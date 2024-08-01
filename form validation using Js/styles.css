@@ -1,0 +1,33 @@
+body{
+    background-image: linear-gradient(to right, rgb(241, 86, 2), rgb(204, 255, 0));
+}
+
+.form{
+    background-color: rgb(255, 255, 255);
+    width: 620px;
+    padding-top: 25px;
+    margin-left: 450px;
+    margin-top: 50px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.table{
+    margin-left: 70px;
+    
+}
+
+.abc{
+    margin-top: 30px;
+    margin-left: 185px;
+    height: 40px;
+    width: 70px;
+}
+
+.abcd{
+    margin-top: 55px;
+}
+
+.alert{
+    margin-left: 20px;
+}
